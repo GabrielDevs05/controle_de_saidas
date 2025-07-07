@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    height: 100%;
+    min-height: 100%;
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* - HEADER - CABEÇALHO - */
+
+header {
+    background-color: #203750;
+    color: white;
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    height: 180px;
+    box-shadow: 0 0 6px #000000;
+    font-style: normal;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    border: 0.5px solid #000000;
+}
+
+.logo-senai-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.logo-senai {
+    padding-left: 20px;
+}
+
+.titulo-cabecalho {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    font-size: 18px;
+}
+
+.logo-senai-link, .logo-senai-img {
+    width: 120px;
+    height: 120px;
+}
+
+.titulo-cabecalho {
+    font-size: 32px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    text-decoration: none;
+}
+
+/* - FINAL HEADER - */
+
+/* - MAIN - PÁG PRINCIPAL - */
+
+main {
+    background-color: #2385CC;
+    color: white;
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    font-size: 14px;
+    font-style: normal;
+    flex: 1;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 80px;
+    margin-top: 50px;
+}
+
+.btnAlunos, .btnSaidas, .btnProf, .btnGraf {
+    width: 280px;
+    height: 280px;
+    box-shadow: 0px 0px 6px 0px #000000;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnAlunos:hover, .btnSaidas:hover, .btnProf:hover, .btnGraf:hover {
+    transform: scale(1.05);
+}
+
+.titulo-main {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.logosPagPrincipal {
+    width: 120px;
+    height: 120px;
+}
+
+.textBtn {
+    font-size: 24px;
+    font-family: 'Lilita One', cursive;
+    color: black;
+    text-align: center;
+}
+
+.menu-alunos {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    flex: 1;
+}
+
+.lado-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-top: 20px;
+}
+
+.menu-lateral-direito {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: #203750;
+    border: 0.5px solid #000000;
+    max-height: 100%;
+    min-height: 100vh;
+}
+
+
+.lista-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.lista-menu a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lista-menu a:hover {
+    color: rgb(128, 128, 128);
+}
+
+.titulo-menu-direito {
+    padding-top: 20px;
+}
+
+.menu-lateral-direito {
+    padding-left: 20px;
+}
+
+.titulo-menu {
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 10px;
+}
+
+
+/* - FINAL MAIN - */
+
+/* - LISTAR ALUNOS - */
+
+.listagem-alunos {
+    height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #alunoList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .aluno-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #00000030;
+    width: 1000px;
+  }
+  
+  .aluno-card p {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Lilita One', cursive;
+  }
+  
+  .aluno-card strong {
+    color: #203750;
+    font-family: 'Lilita One', cursive;
+    font-style: normal;
+  }
+
+/* - FOOTER - RODAPÉ - */
+
+footer {
+    background-color: #203750;
+    color: white;
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    display: flex;
+    height: 60px;
+    box-shadow: 0 0 6px #000000;
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #000000;
+}
+
+.rodape small {
+    margin: 0;
+}
+
+/* - FINAL FOOTER - */
+
+/* - MEDIA QUERIES - */
+
