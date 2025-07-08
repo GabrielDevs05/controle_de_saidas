@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./progListarAlunos.js"defer></script>
-    <title>Alunos</title>
+    <script src="./progDeletarAlunos.js" defer></script>
+    <title>Deletar Aluno</title>
 </head>
 <body>
     <header class="cabecalho">
@@ -24,11 +24,20 @@
             <div class="lado-esquerdo">
                 <div class="titulo-main">
                     <p class="titulo-principal">
-                        Lista dos Alunos Cadastrados!
+                        Consultar Alunos pelo Código
                     </p>
                 </div>
-                <div class="listagem-alunos">
-                    <section id="alunoList"></section>
+                <div class="deletagem-alunos">
+                    <section class="deletar-aluno">
+                        <p class="textDelAluno">Digite o código do aluno que deseja DELETAR!</p><br>
+                        <div class="delAluno">
+                            <label class="textDelAluno" for="codigoAluno">CÓDIGO DO ALUNO:</label><br>
+                            <input type="text" class="inputDelAluno" id="codigo" name="codigo" placeholder="Código do Aluno" required><br><br><br>
+                            <button id="btnDeletarAluno" type="submit">Deletar Aluno</button>
+                        </div>
+                        <br>
+                        <div id="mensagem"></div>
+                    </section>
                 </div>
             </div>
 
@@ -40,16 +49,14 @@
                 <div class="lista-menu-lateral">
                     <ul class="lista-menu">
                         <li><a href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a href="./alunos.html">LISTA DE ALUNOS</a></li>
                         <li><a href="./cadastrarAluno.html">CADASTRAR</a></li>
                         <li><a href="./consultarAluno.html">CONSULTAR</a></li>
                         <li><a href="./editarAluno.html">EDITAR</a></li>
-                        <li><a href="./deletarAluno.html">DELETAR</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        
-        
     </main>
 
     <footer>

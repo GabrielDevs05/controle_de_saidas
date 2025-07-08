@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="progCadastrarAlunos.js"defer></script>
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">ALUNOS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-alunos">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Cadastro de Alunos
+                    </p>
+                </div>
+                <div class="formulario-cadastro-aluno">
+                    <p class="textCadAluno">Preencha os campos abaixo para cadastrar um novo aluno!</p><br>
+                    <form id="formCadastroAluno">
+                        <label class="textCadAluno" for="nomeAluno">Nome:</label><br>
+                        <input type="text" class="inputCadAluno" id="nome" name="nome" placeholder="Nome do Aluno" required><br><br>
+
+                        <label class="textCadAluno" for="sobrenomeAluno">Sobrenome:</label><br>
+                        <input type="text" class="inputCadAluno" id="sobrenome" name="sobrenome" placeholder="Sobrenome do Aluno" required><br><br>
+
+                        <label class="textCadAluno" for="matriculaAluno">Matricula:</label><br>
+                        <input type="text" class="inputCadAluno" id="matricula" name="matricula" placeholder="Matricula do Aluno" required><br><br>
+
+                        <label class="textCadAluno" for="telefoneAluno">Telefone:</label><br>
+                        <input type="tel" class="inputCadAluno" id="telefone" name="telefone" placeholder="Telefone do Aluno" required><br><br>
+
+                        <label class="textCadAluno" for="emailAluno">Email:</label><br>
+                        <input type="email" class="inputCadAluno" id="email" name="email" placeholder="Email do Aluno" required><br><br><br>
+
+                        <button id="btnCadAluno" type="submit">Cadastrar Aluno</button>
+                    </form><br>
+                    <div id="mensagem"></div>
+                </div>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a href="./alunos.html">LISTA DE ALUNOS</a></li>
+                        <li><a href="./consultarAluno.html">CONSULTAR</a></li>
+                        <li><a href="./editarAluno.html">EDITAR</a></li>
+                        <li><a href="./deletarAluno.html">DELETAR</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

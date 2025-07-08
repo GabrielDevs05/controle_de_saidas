@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://api.npoint.io/63601e54bd199ab9d7a3') // sua URL do npoint
+    fetch('https://api.npoint.io/63601e54bd199ab9d7a3')
       .then(response => response.json())
       .then(data => {
         let alunoList = document.getElementById('alunoList');
-        alunoList.innerHTML = ''; // Limpa antes de inserir
+        alunoList.innerHTML = '';
 
         data.forEach(aluno => {
           let card = document.createElement('div');
-          card.classList.add('aluno-card'); // Classe para estilizar depois
+          card.classList.add('aluno-card');
 
           card.innerHTML = `
             <p><strong>Código:</strong> ${aluno.codAluno}</p>
