@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./progDeletarAlunos.js" defer></script>
-    <title>Deletar Aluno</title>
+    <script src="./progListarSaidas.js" defer></script>
+    <title>Saidas</title>
 </head>
 <body>
     <header class="cabecalho">
@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="titulo-cabecalho">
-            <p class="titulo">ALUNOS</p>
+            <p class="titulo">SAÍDAS</p>
         </div>
     </header>
 
@@ -24,20 +24,11 @@
             <div class="lado-esquerdo">
                 <div class="titulo-main">
                     <p class="titulo-principal">
-                        Consultar Alunos pelo Código
+                        FILA VIRTUAL
                     </p>
                 </div>
-                <div class="deletagem-alunos">
-                    <section class="deletar-aluno">
-                        <p class="textDelAluno">Digite o código do aluno que deseja DELETAR!</p><br>
-                        <div class="delAluno">
-                            <label class="textDelAluno" for="codAluno">CÓDIGO DO ALUNO:</label><br>
-                            <input type="text" class="inputDelAluno" id="codAluno" name="codigo" placeholder="Código do Aluno" required><br><br><br>
-                            <button id="btnDeletarAluno" type="submit">Deletar Aluno</button>
-                        </div>
-                        <br>
-                        <div id="mensagem"></div>
-                    </section>
+                <div class="listagem-saidas">
+                    <section id="saidaList"></section>
                 </div>
             </div>
 
@@ -49,11 +40,11 @@
                 <div class="lista-menu-lateral">
                     <ul class="lista-menu">
                         <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
-                        <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
-                        <li><a class="btnsMenu" href="./cadastrarAluno.html">CADASTRAR</a></li>
-                        <li><a class="btnsMenu" href="./consultarAluno.html">CONSULTAR</a></li>
-                        <li><a class="btnsMenu" href="./editarAluno.html">EDITAR</a></li>
-                        <li><a class="btnsMenu" href="./deletarAluno.html"><strong>DELETAR</strong></a></li>
+                        <li><a class="btnsMenu" href="./saidas.html"><strong>FILA VIRTUAL</strong></a></li>
+                        <li><a class="btnsMenu" href="./cadastrarSaida.html">CADASTRAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./consultarSaida.html">CONSULTAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./editarSaida.html">EDITAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./deletarSaida.html">DELETAR SAÍDA</a></li>
                     </ul>
                 </div>
             </div>

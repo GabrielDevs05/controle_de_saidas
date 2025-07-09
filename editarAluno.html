@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progEditarAlunos.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">ALUNOS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-alunos">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Consultar Alunos pelo Código
+                    </p>
+                </div>
+                <div class="Editagem-alunos">
+                    <section class="editar-aluno">
+                        <p class="textDelAluno">Digite o código do aluno que deseja editar!</p><br>
+                        <div class="editarAluno">
+                            <label class="textEditarAluno" for="codAluno">CÓDIGO DO ALUNO:</label><br>
+                            <input type="text" class="inputEditarAluno" id="codAluno" name="codigo" placeholder="Código do Aluno"><br><br><br>
+                            <button id="btnBuscarAluno" type="submit">Buscar Aluno</button><br><br>
+
+                            <label class="textCadAluno" for="nomeAluno">Nome:</label><br>
+                            <input type="text" class="inputCadAluno" id="nomeAluno" name="nome" placeholder="Nome do Aluno" required autocomplete="given-name"><br><br>
+    
+                            <label class="textCadAluno" for="sobrenomeAluno">Sobrenome:</label><br>
+                            <input type="text" class="inputCadAluno" id="sobrenomeAluno" name="sobrenome" placeholder="Sobrenome do Aluno" required autocomplete="family-name"><br><br>
+    
+                            <label class="textCadAluno" for="matriculaAluno">Matricula:</label><br>
+                            <input type="text" class="inputCadAluno" id="matriculaAluno" name="matricula" placeholder="Matricula do Aluno" required><br><br>
+    
+                            <label class="textCadAluno" for="telefoneAluno">Telefone:</label><br>
+                            <input type="tel" class="inputCadAluno" id="telefoneAluno" name="telefone" placeholder="Telefone do Aluno" required autocomplete="tel"><br><br>
+    
+                            <label class="textCadAluno" for="emailAluno">Email:</label><br>
+                            <input type="email" class="inputCadAluno" id="emailAluno" name="email" placeholder="Email do Aluno" required autocomplete="email"><br><br><br>
+
+                            <button id="btnEditarAluno" type="submit">Editar Aluno</button>
+                        </div>
+                        <br>
+                        <div id="mensagem"></div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <div class="lista-menu-lateral">
+                        <ul class="lista-menu">
+                            <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                            <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
+                            <li><a class="btnsMenu" href="./cadastrarAluno.html">CADASTRAR</a></li>
+                            <li><a class="btnsMenu" href="./consultarAluno.html">CONSULTAR</a></li>
+                            <li><a class="btnsMenu" href="./editarAluno.html"><strong>EDITAR</strong></a></li>
+                            <li><a class="btnsMenu" href="./deletarAluno.html">DELETAR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

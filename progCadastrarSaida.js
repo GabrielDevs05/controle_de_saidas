@@ -1,29 +1,36 @@
 let mensagem = document.getElementById('mensagem')
-let btnCadAluno = document.getElementById('btnCadAluno')
+let btnCadSaida = document.getElementById('btnCadSaida')
 
 mensagem.style.display = 'none'
 
-btnCadAluno.addEventListener('click', (e) => {
+btnCadSaida.addEventListener('click', (e) => {
     e.preventDefault()
 
-    let nome = document.getElementById('nomeAluno').value
-    let sobrenome = document.getElementById('sobrenomeAluno').value
-    let matricula = document.getElementById('matriculaAluno').value
-    let telefone = document.getElementById('telefoneAluno').value
-    let email = document.getElementById('emailAluno').value
+    let dataSaida = document.getElementById('dataSaida').value
+    let horaSaida = document.getElementById('horaSaida').value
+    let horaRetorno = document.getElementById('horaRetorno').value
+    let motivo = document.getElementById('motivoSaida').value
+    let localDestino = document.getElementById('localDestino').value
+    let status = document.getElementById('statusSaida').value
+    let nomeAluno = document.getElementById('nomeAluno').value
+    let nomeProfessor = document.getElementById('nomeProfessor').value
 
-    if (nome && sobrenome && matricula && telefone && email) {
-        fetch('http://localhost:8081/aluno', {
+
+    if (dataSaida && horaSaida && horaRetorno && motivo && localDestino && status && nomeAluno && nomeProfessor) {
+        fetch('http://localhost:8081/saida', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nome: nome,
-                sobrenome: sobrenome,
-                matricula: matricula,
-                telefone: telefone,
-                email: email
+                dataSaida: dataSaida,
+                horaSaida: horaSaida,
+                horaRetorno: horaRetorno,
+                motivo: motivo,
+                localDestino: localDestino,
+                status: status,
+                nomeAluno: nomeAluno,
+                nomeProfessor: nomeProfessor
             })
         })
         .then(response => response.json())
@@ -51,5 +58,3 @@ btnCadAluno.addEventListener('click', (e) => {
     }
     mensagem.style.display = 'block';
 })
-
-

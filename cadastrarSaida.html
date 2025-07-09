@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progCadastrarSaida.js" defer></script>
+    <title>Cadastrar Saida</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">SAÍDAS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-alunos">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Cadastro de Alunos
+                    </p>
+                </div>
+                <div class="formulario-cadastro-saida">
+                    <p class="textCadSaida">Preencha os campos abaixo para cadastrar um novo aluno!</p><br>
+                    <form id="formCadastroSaida">
+                        <label class="textCadSaida" for="dataSaida">Data de Saída:</label><br>
+                        <input type="date" class="inputCadSaida" id="dataSaida" name="data" required><br><br>
+
+                        <label class="textCadSaida" for="horaSaida">horaSaida da Saída:</label><br>
+                        <input type="time" class="inputCadSaida" id="horaSaida" name="hora" required><br><br>
+
+                        <label class="textCadSaida" for="horaRetorno">Hora do Retorno:</label><br>
+                        <input type="time" class="inputCadSaida" id="horaRetorno" name="horaRetorno" required><br><br>
+
+                        <label class="textCadSaida" for="motivoSaida">Motivo da Saída:</label><br>
+                        <input type="text" class="inputCadSaida" id="motivoSaida" name="motivo" placeholder="Motivo da Saída" required><br><br>
+
+                        <label class="textCadSaida" for="localDestino">Destino:</label><br>
+                        <input type="text" class="inputCadSaida" id="localDestino" name="destino" placeholder="Local de Destino" required><br><br>
+
+                        <label class="textCadSaida" for="statusSaida">Status:</label><br>
+                        <select class="inputCadSaida" id="statusSaida" name="status" required>
+                            <option value="" disabled selected>Selecione o Status</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Aprovado">Aprovado</option>
+                            <option value="Negado">Negado</option>
+                        </select><br><br>
+
+                        <label class="textCadSaida" for="nomeAluno">Nome do Aluno:</label><br>
+                        <input type="text" class="inputCadSaida" id="nomeAluno" name="nome" placeholder="Nome do Aluno" required autocomplete="given-name"><br><br>
+
+                        <label class="textCadSaida" for="nomeProfessor">Nome do Professor:</label><br>
+                        <input type="text" class="inputCadSaida" id="nomeProfessor" name="professor" placeholder="Nome do Professor" required autocomplete="family-name"><br><br>
+
+                        <button id="btnCadSaida" type="submit">Cadastrar Saída</button>
+                    </form><br>
+                    <div id="mensagem"></div>
+                </div>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./saidas.html">FILA VIRTUAL</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarSaida.html"><strong>CADASTRAR SAÍDA</strong></a></li>
+                        <li><a class="btnsMenu" href="./consultarSaida.html">CONSULTAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./editarSaida.html">EDITAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./deletarSaida.html">DELETAR SAÍDA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

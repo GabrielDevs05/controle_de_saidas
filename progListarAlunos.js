@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://api.npoint.io/63601e54bd199ab9d7a3')
+    fetch(`http://localhost:8081/aluno`)
       .then(response => response.json())
       .then(data => {
-        let alunoList = document.getElementById('alunoList');
-        alunoList.innerHTML = '';
+        let saidaList = document.getElementById('saidaList')
+        saidaList.innerHTML = ''
 
-        data.forEach(aluno => {
-          let card = document.createElement('div');
-          card.classList.add('aluno-card');
+        data.forEach(saida => {
+          let card = document.createElement('div')
+          card.classList.add('saida-card')
 
           card.innerHTML = `
-            <p><strong>Código:</strong> ${aluno.codAluno}</p>
-            <p><strong>Nome:</strong> ${aluno.nome} ${aluno.sobrenome}</p>
-            <p><strong>Matrícula:</strong> ${aluno.matricula}</p>
-            <p><strong>Telefone:</strong> ${aluno.telefone}</p>
-            <p><strong>Email:</strong> ${aluno.email}</p>
-          `;
+            <p><strong>Código:</strong> ${saida.codAluno}</p>
+            <p><strong>Nome:</strong> ${saida.nome} ${saida.sobrenome}</p>
+            <p><strong>Matrícula:</strong> ${saida.matricula}</p>
+            <p><strong>Telefone:</strong> ${saida.telefone}</p>
+            <p><strong>Email:</strong> ${saida.email}</p>
+          `
 
-          alunoList.appendChild(card);
-        });
+          saidaList.appendChild(card)
+        })
       })
-      .catch(error => console.error('Erro ao listar alunos:', error));
-  });
+      .catch(error => console.error('Erro ao listar alunos:', error))
+    })

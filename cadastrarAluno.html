@@ -31,19 +31,19 @@
                     <p class="textCadAluno">Preencha os campos abaixo para cadastrar um novo aluno!</p><br>
                     <form id="formCadastroAluno">
                         <label class="textCadAluno" for="nomeAluno">Nome:</label><br>
-                        <input type="text" class="inputCadAluno" id="nome" name="nome" placeholder="Nome do Aluno" required><br><br>
+                        <input type="text" class="inputCadAluno" id="nomeAluno" name="nome" placeholder="Nome do Aluno" required autocomplete="given-name"><br><br>
 
                         <label class="textCadAluno" for="sobrenomeAluno">Sobrenome:</label><br>
-                        <input type="text" class="inputCadAluno" id="sobrenome" name="sobrenome" placeholder="Sobrenome do Aluno" required><br><br>
+                        <input type="text" class="inputCadAluno" id="sobrenomeAluno" name="sobrenome" placeholder="Sobrenome do Aluno" required autocomplete="family-name"><br><br>
 
                         <label class="textCadAluno" for="matriculaAluno">Matricula:</label><br>
-                        <input type="text" class="inputCadAluno" id="matricula" name="matricula" placeholder="Matricula do Aluno" required><br><br>
+                        <input type="text" class="inputCadAluno" id="matriculaAluno" name="matricula" placeholder="Matricula do Aluno" required><br><br>
 
                         <label class="textCadAluno" for="telefoneAluno">Telefone:</label><br>
-                        <input type="tel" class="inputCadAluno" id="telefone" name="telefone" placeholder="Telefone do Aluno" required><br><br>
+                        <input type="tel" class="inputCadAluno" id="telefoneAluno" name="telefone" placeholder="Telefone do Aluno" required autocomplete="tel"><br><br>
 
                         <label class="textCadAluno" for="emailAluno">Email:</label><br>
-                        <input type="email" class="inputCadAluno" id="email" name="email" placeholder="Email do Aluno" required><br><br><br>
+                        <input type="email" class="inputCadAluno" id="emailAluno" name="email" placeholder="Email do Aluno" required autocomplete="email"><br><br><br>
 
                         <button id="btnCadAluno" type="submit">Cadastrar Aluno</button>
                     </form><br>
@@ -58,11 +58,12 @@
                 </div>
                 <div class="lista-menu-lateral">
                     <ul class="lista-menu">
-                        <li><a href="./index.html">VOLTAR AO INÍCIO</a></li>
-                        <li><a href="./alunos.html">LISTA DE ALUNOS</a></li>
-                        <li><a href="./consultarAluno.html">CONSULTAR</a></li>
-                        <li><a href="./editarAluno.html">EDITAR</a></li>
-                        <li><a href="./deletarAluno.html">DELETAR</a></li>
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarAluno.html"><strong>CADASTRAR</strong></a></li>
+                        <li><a class="btnsMenu" href="./consultarAluno.html">CONSULTAR</a></li>
+                        <li><a class="btnsMenu" href="./editarAluno.html">EDITAR</a></li>
+                        <li><a class="btnsMenu" href="./deletarAluno.html">DELETAR</a></li>
                     </ul>
                 </div>
             </div>
