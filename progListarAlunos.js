@@ -2,22 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`http://localhost:8081/aluno`)
       .then(response => response.json())
       .then(data => {
-        let saidaList = document.getElementById('saidaList')
-        saidaList.innerHTML = ''
+        let alunoList = document.getElementById('alunoList')
+        alunoList.innerHTML = ''
 
-        data.forEach(saida => {
+        data.forEach(aluno => {
           let card = document.createElement('div')
-          card.classList.add('saida-card')
+          card.classList.add('aluno-card')
 
           card.innerHTML = `
-            <p><strong>Código:</strong> ${saida.codAluno}</p>
-            <p><strong>Nome:</strong> ${saida.nome} ${saida.sobrenome}</p>
-            <p><strong>Matrícula:</strong> ${saida.matricula}</p>
-            <p><strong>Telefone:</strong> ${saida.telefone}</p>
-            <p><strong>Email:</strong> ${saida.email}</p>
+            <p><strong>Código:</strong> ${aluno.codAluno}</p>
+            <p><strong>Nome:</strong> ${aluno.nome} ${aluno.sobrenome}</p>
+            <p><strong>Matrícula:</strong> ${aluno.matricula}</p>
+            <p><strong>Telefone:</strong> ${aluno.telefone}</p>
+            <p><strong>Email:</strong> ${aluno.email}</p>
           `
 
-          saidaList.appendChild(card)
+          alunoList.appendChild(card)
         })
       })
       .catch(error => console.error('Erro ao listar alunos:', error))

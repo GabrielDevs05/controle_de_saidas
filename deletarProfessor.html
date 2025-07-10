@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./progConsultarAlunos.js" defer></script>
-    <title>Consultar Aluno</title>
+    <script src="./progDeletarProfessores.js" defer></script>
+    <title>Deletar Professor</title>
 </head>
 <body>
     <header class="cabecalho">
@@ -15,28 +15,27 @@
             </a>
         </div>
         <div class="titulo-cabecalho">
-            <p class="titulo">ALUNOS</p>
+            <p class="titulo">PROFESSORES</p>
         </div>
     </header>
 
     <main>
-        <div class="menu-alunos">
+        <div class="menu-professores">
             <div class="lado-esquerdo">
                 <div class="titulo-main">
                     <p class="titulo-principal">
-                        Consultar Alunos pelo Código
+                        Consultar Professores pelo Código
                     </p>
                 </div>
-                <div class="listagem-alunos">
-                    <section class="formulario-consulta-aluno">
-                        <p class="textConsultaAluno">Digite o código do aluno que deseja CONSULTAR!</p><br>
-                        <div class="consultaAluno">
-                            <label class="textConsultaAluno" for="codAluno">CÓDIGO DO ALUNO:</label><br>
-                            <input type="text" class="inputConsultaAluno" id="codAluno" name="codigo" placeholder="Código do Aluno" required><br><br><br>
-                            <button id="btnConsultaAluno" type="submit">Consultar Aluno</button>
+                <div class="deletagem-professores">
+                    <section class="deletar-professor">
+                        <p class="textDelProfessor">Digite o código do professor que deseja DELETAR!</p><br>
+                        <div class="delProfessor">
+                            <label class="textDelProfessor" for="codProfessor">CÓDIGO DO ALUNO:</label><br>
+                            <input type="text" class="inputDelProfessor" id="codProfessor" name="codigo" placeholder="Código do Professor" required><br><br><br>
+                            <button id="btnDeletarProfessor" type="submit">Deletar Professor</button>
                         </div>
-                            <br>
-                        <div id="alunoConsultado"></div><br>
+                        <br>
                         <div id="mensagem"></div>
                     </section>
                 </div>
@@ -50,11 +49,11 @@
                 <div class="lista-menu-lateral">
                     <ul class="lista-menu">
                         <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
-                        <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
-                        <li><a class="btnsMenu" href="./cadastrarAluno.html">CADASTRAR</a></li>
-                        <li><a class="btnsMenu" href="./consultarAluno.html"><strong>CONSULTAR</strong></a></li>
-                        <li><a class="btnsMenu" href="./editarAluno.html">EDITAR</a></li>
-                        <li><a class="btnsMenu" href="./deletarAluno.html">DELETAR</a></li>
+                        <li><a class="btnsMenu" href="./professores.html">LISTA DE PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarProfessor.html">CADASTRAR</a></li>
+                        <li><a class="btnsMenu" href="./consultarProfessor.html">CONSULTAR</a></li>
+                        <li><a class="btnsMenu" href="./editarProfessor.html">EDITAR</a></li>
+                        <li><a class="btnsMenu" href="./deletarProfessor.html"><strong>DELETAR</strong></a></li>
                     </ul>
                 </div>
             </div>

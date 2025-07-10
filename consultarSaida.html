@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./progConsultarAlunos.js" defer></script>
-    <title>Consultar Aluno</title>
+    <script src="./progConsultarSaida.js" defer></script>
+    <title>Consultar Saida</title>
 </head>
 <body>
     <header class="cabecalho">
@@ -15,33 +15,32 @@
             </a>
         </div>
         <div class="titulo-cabecalho">
-            <p class="titulo">ALUNOS</p>
+            <p class="titulo">SAÍDAS</p>
         </div>
     </header>
 
     <main>
-        <div class="menu-alunos">
+        <div class="menu-saidas">
             <div class="lado-esquerdo">
                 <div class="titulo-main">
                     <p class="titulo-principal">
-                        Consultar Alunos pelo Código
+                        Consultar Saídas pelo Código
                     </p>
                 </div>
-                <div class="listagem-alunos">
-                    <section class="formulario-consulta-aluno">
-                        <p class="textConsultaAluno">Digite o código do aluno que deseja CONSULTAR!</p><br>
-                        <div class="consultaAluno">
-                            <label class="textConsultaAluno" for="codAluno">CÓDIGO DO ALUNO:</label><br>
-                            <input type="text" class="inputConsultaAluno" id="codAluno" name="codigo" placeholder="Código do Aluno" required><br><br><br>
-                            <button id="btnConsultaAluno" type="submit">Consultar Aluno</button>
+                <div class="listagem-saidas">
+                    <section class="formulario-consulta-saida">
+                        <p class="textConsultaSaida">Digite o código da saída que deseja CONSULTAR!</p><br>
+                        <div class="consultaSaida">
+                            <label class="textConsultaSaida" for="codSaida">CÓDIGO DA SAÍDA:</label><br>
+                            <input type="text" class="inputConsultaSaida" id="codSaida" name="codigo" placeholder="Código do Aluno" required><br><br><br>
+                            <button id="btnConsultaSaida" type="submit">Consultar Saída</button>
                         </div>
                             <br>
-                        <div id="alunoConsultado"></div><br>
+                        <div id="saidaConsultada"></div><br>
                         <div id="mensagem"></div>
                     </section>
                 </div>
             </div>
-
 
             <div class="menu-lateral-direito">
                 <div class="titulo-menu-lateral">
@@ -50,11 +49,11 @@
                 <div class="lista-menu-lateral">
                     <ul class="lista-menu">
                         <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
-                        <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
-                        <li><a class="btnsMenu" href="./cadastrarAluno.html">CADASTRAR</a></li>
-                        <li><a class="btnsMenu" href="./consultarAluno.html"><strong>CONSULTAR</strong></a></li>
-                        <li><a class="btnsMenu" href="./editarAluno.html">EDITAR</a></li>
-                        <li><a class="btnsMenu" href="./deletarAluno.html">DELETAR</a></li>
+                        <li><a class="btnsMenu" href="./saidas.html">FILA VIRTUAL</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarSaida.html">CADASTRAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./consultarSaida.html"><strong>CONSULTAR SAÍDA</strong></a></li>
+                        <li><a class="btnsMenu" href="./editarSaida.html">EDITAR SAÍDA</a></li>
+                        <li><a class="btnsMenu" href="./deletarSaida.html">DELETAR SAÍDA</a></li>
                     </ul>
                 </div>
             </div>

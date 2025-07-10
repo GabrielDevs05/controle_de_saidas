@@ -131,7 +131,7 @@ main {
 
 /* - PÁGINA DE ALUNOS - */
 
-.menu-alunos {
+.menu-alunos, .menu-saidas, .menu-professores, .menu-graficos {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -215,6 +215,8 @@ main {
 }
 
 /* - FINAL MAIN - */
+
+/* - ALUNOS - */
 
 /* - LISTAR ALUNOS - */
 
@@ -365,8 +367,6 @@ main {
     font-style: normal;
 }
 
-
-
 /* - DELETAR ALUNO - */
 
 .textDelAluno {
@@ -408,6 +408,423 @@ main {
     transform: scale(1.05);
     box-shadow: 0 0 8px #ffffff;
 }
+
+/* - FINAL ALUNO - */
+
+/* - PROFESSORES - */
+
+/* - LISTAR PROFESSORES - */
+
+.listagem-professores {
+    height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#professorList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.professor-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 0 8px black;
+    width: 1000px;
+}
+
+.professor-card p {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Lilita One', cursive;
+}
+
+.professor-card strong {
+    color: #203750;
+    font-family: 'Lilita One', cursive;
+    font-style: normal;
+}
+
+/* - FINAL LISTAR PROFESSORES - */
+
+/* - CADASTRAR PROFESSOR - */
+
+.textCadProfessor {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.inputCadProfessor {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnCadProfessor {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnCadProfessor:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+/* - FINAL CADASTRAR PROFESSOR - */
+
+/* - CONSULTAR PROFESSOR - */
+
+.formulario-consulta-professor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.textConsultaProfessor {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.inputConsultaProfessor {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnConsultaProfessor {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#professorConsultado {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 0 6px #000000;
+    width: 400px;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+#professorConsultado strong {
+    color: #203750;
+    font-family: 'Lilita One', cursive;
+    font-style: normal;
+}
+
+/* - EDITAR PROFESSOR - */
+
+.editar-professor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.textEditarProfessor {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.inputEditarProfessor {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnBuscarProfessor {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnEditarProfessor {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnEditarProfessor:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+
+/* - DELETAR PROFESSOR - */
+
+.textDelProfessor {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.inputDelProfessor {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnDeletarProfessor {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnDeletarProfessor:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+/* - FINAL PROFESSORES - */
+
+/* - SAÍDAS - */
+
+/*- LISTAR SAÍDAS -*/
+
+.listagem-saidas {
+    height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#saidaList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.saida-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 0 8px black;
+    width: 1000px;
+}
+
+.saida-card p {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Lilita One', cursive;
+}
+
+.saida-card strong {
+    color: #203750;
+    font-family: 'Lilita One', cursive;
+    font-style: normal;
+}
+
+/* - FINAL LISTAR SAÍDAS - */
+
+/* - CADASTRAR SAÍDA - */
+
+.textCadSaida {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.inputCadSaida {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnCadSaida {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnCadSaida:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+/* - FINAL CADASTRAR SAÍDA - */
+
+/* - CONSULTAR SAÍDA - */
+
+.formulario-consulta-saida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.textConsultaSaida {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
+
+.inputConsultaSaida {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnConsultaSaida {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#saidaConsultada {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 0 6px #000000;
+    width: 400px;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+#saidaConsultada strong {
+    color: #203750;
+    font-family: 'Lilita One', cursive;
+    font-style: normal;
+}
+
+/* - DELETAR SAÍDA - */
+
+
 
 /* - MENSAGEM SUCESSO/ERRO - */
 

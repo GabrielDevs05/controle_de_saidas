@@ -5,18 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let alunoList = document.getElementById('alunoList')
         alunoList.innerHTML = ''
 
-        data.forEach(aluno => {
+        data.forEach(saida => {
           let card = document.createElement('div')
-          card.classList.add('aluno-card')
+          card.classList.add('saida-card')
 
           card.innerHTML = `
-            <p><strong>Código:</strong> ${aluno.codAluno}</p>
-            <p><strong>Nome:</strong> ${aluno.nome} ${aluno.sobrenome}</p>
-            <p><strong>Matrícula:</strong> ${aluno.matricula}</p>
-            <p><strong>Telefone:</strong> ${aluno.telefone}</p>
-            <p><strong>Email:</strong> ${aluno.email}</p>
+            <p><strong>Código:</strong> ${saida.codAluno}</p>
+            <p><strong>Nome:</strong> ${saida.nome} ${saida.sobrenome}</p>
+            <p><strong>Matrícula:</strong> ${saida.matricula}</p>
+            <p><strong>Telefone:</strong> ${saida.telefone}</p>
+            <p><strong>Email:</strong> ${saida.email}</p>
           `
-
           alunoList.appendChild(card)
         })
       })
