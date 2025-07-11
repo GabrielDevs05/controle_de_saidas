@@ -31,10 +31,10 @@
                     <p class="textCadSaida">Preencha os campos abaixo para cadastrar uma nova saída!</p><br>
                     <form id="formCadastroSaida">
                         <label class="textCadSaida" for="dataSolicitacao">Data da Saída:</label><br>
-                        <input type="date" class="inputCadSaida" id="dataSolicitacao" name="data" required><br><br>
+                        <input type="text" class="inputCadSaida" id="dataSolicitacao" name="data" required readonly><br><br>
                         // nome da variqvel que vc precisa usar = new Date().toLocaleDateString("pt-BR")
                         <label class="textCadSaida" for="horaSaida">horaSaida da Saída:</label><br>
-                        <input type="time" class="inputCadSaida" id="horaSaida" name="hora" required><br><br>
+                        <input type="time" class="inputCadSaida" id="horaSaida" name="hora" required readonly><br><br>
 
                         <label class="textCadSaida" for="horaRetorno">Hora do Retorno:</label><br>
                         <input type="time" class="inputCadSaida" id="horaRetorno" name="horaRetorno" required><br><br>

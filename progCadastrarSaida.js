@@ -42,18 +42,35 @@ codProfessor.addEventListener('blur', () => {
 
 mensagem.style.display = 'none'
 
-
-
 btnCadSaida.addEventListener('click', (e) => {
     e.preventDefault()
+  
+    const dataAtual = new Date().toLocaleDateString("pt-BR")
+    const horaAtual = new Date().toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' })
   
     const dataSolicitacao = document.getElementById('dataSolicitacao')
     const horaSaida = document.getElementById('horaSaida')
     const horaRetorno = document.getElementById('horaRetorno')
   
+    document.getElementById('dataSolicitacao').value = dataAtual
+    document.getElementById('horaSaida').value = horaAtual
+  
     if (dataSolicitacao.value && horaSaida.value && horaRetorno.value &&
-        motivo.value && localDestino.value && statusSaida.value &&
-        nomeAluno.value && nomeProfessor.value) {
+        motivo.value && localDestino.value && statusSaida.value && codAluno.value &&
+        nomeAluno.value && codProfessor.value && nomeProfessor.value) {
+  
+      console.log({
+        dataSolicitacao: dataSolicitacao.value,
+        horaSaida: horaSaida.value,
+        horaRetorno: horaRetorno.value,
+        motivo: motivo.value,
+        localDestino: localDestino.value,
+        status: statusSaida.value,
+        codAluno: Number(codAluno.value),
+        nomeAluno: nomeAluno.value,
+        codProfessor: Number(codProfessor.value),
+        nomeProfessor: nomeProfessor.value
+      })
   
       fetch('http://localhost:8081/saida', {
         method: 'POST',
@@ -61,7 +78,7 @@ btnCadSaida.addEventListener('click', (e) => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          dataSolicitacao: dataSolicitacao.value,  // PEGA DO INPUT!
+          dataSolicitacao: dataSolicitacao.value,
           horaSaida: horaSaida.value,
           horaRetorno: horaRetorno.value,
           motivo: motivo.value,
@@ -89,6 +106,7 @@ btnCadSaida.addEventListener('click', (e) => {
       mensagem.style.backgroundColor = 'lightcoral'
       console.error('Campos faltando.')
     }
+  
     mensagem.style.display = 'block'
   })
   
