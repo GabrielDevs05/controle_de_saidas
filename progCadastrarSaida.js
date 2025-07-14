@@ -1,43 +1,102 @@
 let mensagem = document.getElementById('mensagem')
 let btnCadSaida = document.getElementById('btnCadSaida')
-
 let motivo = document.getElementById('motivoSaida')
 let localDestino = document.getElementById('localDestino')
 let statusSaida = document.getElementById('statusSaida')
 let codAluno = document.getElementById('codAluno')
-let nomeAluno = document.getElementById('nomeAluno')
-let codProfessor = document.getElementById('codProfessor')
-let nomeProfessor = document.getElementById('nomeProfessor')
 
-codAluno.addEventListener('blur', () => {
-    fetch(`http://localhost:8081/aluno/${codAluno.value}`)
+document.addEventListener('DOMContentLoaded', () => {
+    fetch(`http://localhost:8081/aluno`)
     .then(response => response.json())
     .then(data => {
-        nomeAluno.value = data.nome + ' ' + data.sobrenome
+        nomeAluno = document.getElementById('nomeAluno')
+        nomeAluno.innerHTML = ''
+        
+        data.forEach(aluno => {
+            let option = document.createElement('option')
+            option.value = aluno.codAluno 
+            option.textContent = `${aluno.nome} ${aluno.sobrenome}`
+            nomeAluno.appendChild(option)
+        })
     })
-    .catch(error => {
-        mensagem.textContent = 'ERRO AO BUSCAR ALUNO!'
-        mensagem.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.5)'
-        mensagem.style.backgroundColor = 'lightcoral'
-        mensagem.style.border = '1px solid red'
-        console.error('Erro ao buscar aluno:', error)
-    })
+    .catch(error => console.error('Erro ao buscar Aluno:', error))
 })
 
+nomeAluno.addEventListener('blur', () => {
+  fetch(`http://localhost:8081/aluno/${nomeAluno.value}`)
+  .then(response => response.json())
+  .then(data => {
+      codAluno.value = data.codAluno
+  })
+  .catch(error => {
+      mensagem.textContent = 'ERRO AO BUSCAR ALUNO!'
+      mensagem.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.5)'
+      mensagem.style.backgroundColor = 'lightcoral'
+      mensagem.style.border = '1px solid red'
+      console.error('Erro ao buscar aluno:', error)
+  })
+})
+
+codAluno.addEventListener('blur', () => {
+  fetch(`http://localhost:8081/aluno/${codAluno.value}`)
+  .then(response => response.json())
+  .then(data => {
+      nomeAluno.value = data.codAluno
+  })
+  .catch(error => {
+      mensagem.textContent = 'ERRO AO BUSCAR ALUNO!'
+      mensagem.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.5)'
+      mensagem.style.backgroundColor = 'lightcoral'
+      mensagem.style.border = '1px solid red'
+      console.error('Erro ao buscar aluno:', error)
+  })
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch(`http://localhost:8081/professor`)
+  .then(response => response.json())
+  .then(data => {
+      nomeProfessor = document.getElementById('nomeProfessor')
+      nomeProfessor.innerHTML = ''
+      
+      data.forEach(professor => {
+          let option = document.createElement('option')
+          option.value = professor.codProfessor
+          option.textContent = `${professor.nome} ${professor.sobrenome}`
+          nomeProfessor.appendChild(option)
+      })
+  })
+  .catch(error => console.error('Erro ao buscar Professor:', error))
+})
+
+nomeProfessor.addEventListener('blur', () => {
+  fetch(`http://localhost:8081/professor/${nomeProfessor.value}`)
+  .then(response => response.json())
+  .then(data => {
+      codProfessor.value = data.codProfessor
+  })
+  .catch(error => {
+      mensagem.textContent = 'ERRO AO BUSCAR PROFESSOR!'
+      mensagem.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.5)'
+      mensagem.style.backgroundColor = 'lightcoral'
+      mensagem.style.border = '1px solid red'
+      console.error('Erro ao buscar aluno:', error)
+  })
+})
 
 codProfessor.addEventListener('blur', () => {
-    fetch(`http://localhost:8081/professor/${codProfessor.value}`)
-    .then(response => response.json())
-    .then(data => {
-        nomeProfessor.value = data.nome + ' ' + data.sobrenome
-    })
-    .catch(error => {
-        mensagem.textContent = 'ERRO AO BUSCAR PROFESSOR!'
-        mensagem.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.5)'
-        mensagem.style.backgroundColor = 'lightcoral'
-        mensagem.style.border = '1px solid red'
-        console.error('Erro ao buscar professor:', error)
-    })
+  fetch(`http://localhost:8081/professor/${codProfessor.value}`)
+  .then(response => response.json())
+  .then(data => {
+      nomeProfessor.value = data.codProfessor
+  })
+  .catch(error => {
+      mensagem.textContent = 'ERRO AO BUSCAR PROFESSOR!'
+      mensagem.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.5)'
+      mensagem.style.backgroundColor = 'lightcoral'
+      mensagem.style.border = '1px solid red'
+      console.error('Erro ao buscar professor:', error)
+  })
 })
 
 mensagem.style.display = 'none'
@@ -45,7 +104,8 @@ mensagem.style.display = 'none'
 btnCadSaida.addEventListener('click', (e) => {
     e.preventDefault()
   
-    const dataAtual = new Date().toLocaleDateString("pt-BR")
+    const dataAtual = new Date().toISOString().split('T')[0]
+    console.log(dataAtual)
     const horaAtual = new Date().toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' })
   
     const dataSolicitacao = document.getElementById('dataSolicitacao')
@@ -54,6 +114,9 @@ btnCadSaida.addEventListener('click', (e) => {
   
     document.getElementById('dataSolicitacao').value = dataAtual
     document.getElementById('horaSaida').value = horaAtual
+
+    nomeAluno = document.getElementById('nomeAluno')
+
   
     if (dataSolicitacao.value && horaSaida.value && horaRetorno.value &&
         motivo.value && localDestino.value && statusSaida.value && codAluno.value &&
@@ -66,9 +129,9 @@ btnCadSaida.addEventListener('click', (e) => {
         motivo: motivo.value,
         localDestino: localDestino.value,
         status: statusSaida.value,
-        codAluno: Number(codAluno.value),
+        aluno_cod: Number(codAluno.value),
         nomeAluno: nomeAluno.value,
-        codProfessor: Number(codProfessor.value),
+        professor_cod: Number(codProfessor.value),
         nomeProfessor: nomeProfessor.value
       })
   
@@ -84,8 +147,10 @@ btnCadSaida.addEventListener('click', (e) => {
           motivo: motivo.value,
           localDestino: localDestino.value,
           status: statusSaida.value,
-          nomeAluno: nomeAluno.value,
-          nomeProfessor: nomeProfessor.value
+          aluno_cod: Number(codAluno.value),
+          nomeAluno: nomeAluno = nomeAluno.options[nomeAluno.selectedIndex].textContent,
+          professor_cod: Number(codProfessor.value),
+          nomeProfessor: nomeProfessor = nomeProfessor.options[nomeProfessor.selectedIndex].textContent
         })
       })
       .then(response => response.json())
@@ -109,4 +174,3 @@ btnCadSaida.addEventListener('click', (e) => {
   
     mensagem.style.display = 'block'
   })
-  

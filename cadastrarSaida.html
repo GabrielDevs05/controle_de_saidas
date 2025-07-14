@@ -32,12 +32,12 @@
                     <form id="formCadastroSaida">
                         <label class="textCadSaida" for="dataSolicitacao">Data da Saída:</label><br>
                         <input type="text" class="inputCadSaida" id="dataSolicitacao" name="data" required readonly><br><br>
-                        // nome da variqvel que vc precisa usar = new Date().toLocaleDateString("pt-BR")
+                         <!-- nome da variavel que vc precisa usar = new Date().toLocaleDateString("pt-BR") -->
                         <label class="textCadSaida" for="horaSaida">horaSaida da Saída:</label><br>
-                        <input type="time" class="inputCadSaida" id="horaSaida" name="hora" required readonly><br><br>
+                        <input type="text" class="inputCadSaida" id="horaSaida" name="hora" required readonly><br><br>
 
                         <label class="textCadSaida" for="horaRetorno">Hora do Retorno:</label><br>
-                        <input type="time" class="inputCadSaida" id="horaRetorno" name="horaRetorno" required><br><br>
+                        <input type="text" class="inputCadSaida" id="horaRetorno" name="horaRetorno" ><br><br>
 
                         <label class="textCadSaida" for="motivoSaida">Motivo da Saída:</label><br>
                         <input type="text" class="inputCadSaida" id="motivoSaida" name="motivo" placeholder="Motivo da Saída" required><br><br>
@@ -46,22 +46,27 @@
                         <input type="text" class="inputCadSaida" id="localDestino" name="destino" placeholder="Local de Destino" required><br><br>
 
                         <label class="textCadSaida" for="statusSaida">Status:</label><br>
-                        <select class="inputCadSaida" id="statusSaida" name="status" required>
-                            <option value="" disabled selected>Selecione o Status</option>
-                            <option value="Pendente">Pendente</option>
+                        <select class="inputCadSaida" id="statusSaida" name="status" required readonly>
+                            <option value="Pendente" selected>Pendente</option>
                         </select><br><br>
 
                         <label class="textCadSaida" for="codAluno">Código do Aluno</label><br>
                         <input type="text" class="inputCadSaida" id="codAluno" name="codigoAluno" placeholder="Código do Aluno" required><br><br>
 
                         <label class="textCadSaida" for="nomeAluno">Nome do Aluno:</label><br>
-                        <input type="text" class="inputCadSaida" id="nomeAluno" name="nome" placeholder="Nome do Aluno" required autocomplete="given-name" readonly><br><br>
+                        <!-- <input type="text" class="inputCadSaida" id="nomeAluno" name="nome" placeholder="Nome do Aluno" required autocomplete="given-name" readonly><br><br> -->
+                        <select class="inputCadSaida" id="nomeAluno" name="status" required>
+                            <option value="" selected></option>
+                        </select><br><br>
 
                         <label class="textCadSaida" for="codProfessor">Código do Professor:</label><br>
                         <input type="text" class="inputCadSaida" id="codProfessor" name="codigoProfessor" placeholder="Código do Professor" required><br><br>
 
                         <label class="textCadSaida" for="nomeProfessor">Nome do Professor:</label><br>
-                        <input type="text" class="inputCadSaida" id="nomeProfessor" name="professor" placeholder="Nome do Professor" required autocomplete="family-name" readonly><br><br>
+                        <!-- <input type="text" class="inputCadSaida" id="nomeProfessor" name="professor" placeholder="Nome do Professor" required autocomplete="family-name"><br><br> -->
+                        <select class="inputCadSaida" id="nomeProfessor" name="status" required>
+                            <option value="" selected></option>
+                        </select><br><br>
 
                         <button id="btnCadSaida" type="submit">Cadastrar Saída</button>
                     </form><br>

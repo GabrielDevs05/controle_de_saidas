@@ -11,10 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
           card.innerHTML = `
             <p><strong>Código:</strong> ${saida.codSaida}</p>
-            <p><strong>Nome:</strong> ${saida.nome} ${saida.sobrenome}</p>
-            <p><strong>Matrícula:</strong> ${saida.matricula}</p>
-            <p><strong>Telefone:</strong> ${saida.telefone}</p>
-            <p><strong>Email:</strong> ${saida.email}</p>
+            <p><strong>Data de Solicitação:</strong> ${saida.dataSolicitacao}</p>
+            <p><strong>Hora de Saída:</strong> ${saida.horaSaida}</p>
+            <p><strong>Hora de Retorno:</strong> ${saida.horaRetorno}</p>
+            <p><strong>Motivo:</strong> ${saida.motivo}</p>
+            <p><strong>Local de Destino:</strong> ${saida.localDestino}</p>
+            <p><strong>Status:</strong> ${saida.status}</p>
+            <p><strong>Nome do Aluno:</strong> ${saida.nomeAluno}</p>
+            <p><strong>Nome do Professor:</strong> ${saida.nomeProfessor}</p>
           `
           saidaList.appendChild(card)
         })
