@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progEditarSaidas.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">SAÍDAS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-saidas">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Consultar saidas pelo Código
+                    </p>
+                </div>
+                <div class="Editagem-saidas">
+                    <section class="editar-saida">
+                        <p class="textEditarSaida">Digite o código da saida que deseja EDITAR!</p><br>
+                        <label class="textcadSaida" for="codSaida">CÓDIGO DO ALUNO:</label><br>
+                        <input type="text" class="inputEditarSaida" id="codSaida" name="codigo" placeholder="Código do Saida"><br><br><br>
+                        <button id="btnBuscarSaida" type="submit">Buscar Saida</button><br><br>
+
+                                <label class="textCadSaida" for="dataSolicitacao">DATA DA SAÍDA:</label><br>
+                                <input type="text" class="inputCadSaida" id="dataSolicitacao" name="data" required readonly><br><br>
+                                
+                                <label class="textCadSaida" for="horaSaida">HORA DA SAÍDA:</label><br>
+                                <input type="text" class="inputCadSaida" id="horaSaida" name="hora" required readonly><br><br>
+        
+                                <label class="textCadSaida" for="horaRetorno">HORA DO RETORNO:</label><br>
+                                <input type="time" class="inputCadSaida" id="horaRetorno" name="horaRetorno" placeholder="Hora de Retorno Prevista"><br><br>
+        
+                                <label class="textCadSaida" for="motivoSaida">MOTIVO DA SAÍDA:</label><br>
+                                <input type="text" class="inputCadSaida" id="motivoSaida" name="motivo" placeholder="Motivo da Saída" required><br><br>
+        
+                                <label class="textCadSaida" for="localDestino">DESTINO:</label><br>
+                                <input type="text" class="inputCadSaida" id="localDestino" name="destino" placeholder="Local de Destino" required><br><br>
+        
+                                <label class="textCadSaida" for="statusSaida">STATUS:</label><br>
+                                <select class="selectStatus" class="inputCadSaida" id="statusSaida" name="status" required readonly>
+                                    <option value="Pendente" selected>Pendente</option>
+                                </select><br><br>
+        
+                                <label class="textCadSaida" for="codAluno">CÓDIGO DO ALUNO:</label><br>
+                                <input type="text" class="inputCadSaida" id="codAluno" name="codigoAluno" placeholder="Código do Aluno" required><br><br>
+        
+                                <label class="textCadSaida" for="nomeAluno">NOME DO ALUNO:</label><br>
+                                
+                                <select class="selectAluno" class="inputCadSaida" id="nomeAluno" name="status" required>
+                                    <option value="" selected></option>
+                                </select><br><br>
+        
+                                <label class="textCadSaida" for="codProfessor">CÓDIGO DO PROFESSOR:</label><br>
+                                <input type="text" class="inputCadSaida" id="codProfessor" name="codigoProfessor" placeholder="Código do Professor" required><br><br>
+        
+                                <label class="textCadSaida" for="nomeProfessor">NOME DO PROFESSOR:</label><br>
+                                
+                                <select class="selectProfessor" class="inputCadSaida" id="nomeProfessor" name="status" required>
+                                    <option value="" selected></option>
+                                </select><br><br><br>
+        
+                                    <button id="btnEditarSaida" type="submit">Editar Saída</button>
+                                </div>
+                                <br>
+                                <div id="mensagem"></div>
+                            </section>
+                        </div>
+                    </div>
+                       
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <div class="lista-menu-lateral">
+                        <ul class="lista-menu">
+                            <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                            <li><a class="btnsMenu" href="./saidas.html">FILA VIRTUAL</a></li>
+                            <li><a class="btnsMenu" href="./cadastrarSaida.html">CADASTRAR</a></li>
+                            <li><a class="btnsMenu" href="./consultarSaida.html">CONSULTAR</a></li>
+                            <li><a class="btnsMenu" href="./editarSaida.html"><strong>EDITAR</strong></a></li>
+                            <li><a class="btnsMenu" href="./deletarSaida.html">DELETAR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

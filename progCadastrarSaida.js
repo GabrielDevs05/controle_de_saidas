@@ -6,11 +6,19 @@ let statusSaida = document.getElementById('statusSaida')
 let codAluno = document.getElementById('codAluno')
 
 document.addEventListener('DOMContentLoaded', () => {
+  const dataAtual = new Date().toISOString().split('T')[0]
+  const horaAtual = new Date().toTimeString().split(':').slice(0,2).join(':')
+
+  document.getElementById('dataSolicitacao').value = dataAtual
+  document.getElementById('horaSaida').value = horaAtual
+})
+
+document.addEventListener('DOMContentLoaded', () => {
     fetch(`http://localhost:8081/aluno`)
     .then(response => response.json())
     .then(data => {
         nomeAluno = document.getElementById('nomeAluno')
-        nomeAluno.innerHTML = ''
+        nomeAluno.innerHTML = '<option value="" disabled selected>Selecione o Aluno</option>'
         
         data.forEach(aluno => {
             let option = document.createElement('option')
@@ -57,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   .then(response => response.json())
   .then(data => {
       nomeProfessor = document.getElementById('nomeProfessor')
-      nomeProfessor.innerHTML = ''
+      nomeProfessor.innerHTML = '<option value="" disabled selected>Selecione o Professor</option>'
       
       data.forEach(professor => {
           let option = document.createElement('option')
@@ -103,7 +111,7 @@ mensagem.style.display = 'none'
 
 btnCadSaida.addEventListener('click', (e) => {
     e.preventDefault()
-  
+
     const dataAtual = new Date().toISOString().split('T')[0]
     console.log(dataAtual)
     const horaAtual = new Date().toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' })
@@ -147,9 +155,9 @@ btnCadSaida.addEventListener('click', (e) => {
           motivo: motivo.value,
           localDestino: localDestino.value,
           status: statusSaida.value,
-          aluno_cod: Number(codAluno.value),
+          aluno_cod: codAluno.value,
           nomeAluno: nomeAluno = nomeAluno.options[nomeAluno.selectedIndex].textContent,
-          professor_cod: Number(codProfessor.value),
+          professor_cod: codProfessor.value,
           nomeProfessor: nomeProfessor = nomeProfessor.options[nomeProfessor.selectedIndex].textContent
         })
       })
@@ -165,6 +173,8 @@ btnCadSaida.addEventListener('click', (e) => {
         mensagem.style.backgroundColor = 'lightcoral'
         console.error('Erro:', error)
       })
+
+      location.reload();
   
     } else {
       mensagem.textContent = 'POR FAVOR, PREENCHA TODOS OS CAMPOS!'

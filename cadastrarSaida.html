@@ -30,43 +30,43 @@
                 <div class="formulario-cadastro-saida">
                     <p class="textCadSaida">Preencha os campos abaixo para cadastrar uma nova saída!</p><br>
                     <form id="formCadastroSaida">
-                        <label class="textCadSaida" for="dataSolicitacao">Data da Saída:</label><br>
+                        <label class="textCadSaida" for="dataSolicitacao">DATA DA SAÍDA:</label><br>
                         <input type="text" class="inputCadSaida" id="dataSolicitacao" name="data" required readonly><br><br>
                          <!-- nome da variavel que vc precisa usar = new Date().toLocaleDateString("pt-BR") -->
-                        <label class="textCadSaida" for="horaSaida">horaSaida da Saída:</label><br>
+                        <label class="textCadSaida" for="horaSaida">HORA DA SAÍDA:</label><br>
                         <input type="text" class="inputCadSaida" id="horaSaida" name="hora" required readonly><br><br>
 
-                        <label class="textCadSaida" for="horaRetorno">Hora do Retorno:</label><br>
-                        <input type="text" class="inputCadSaida" id="horaRetorno" name="horaRetorno" ><br><br>
+                        <label class="textCadSaida" for="horaRetorno">HORA DO RETORNO:</label><br>
+                        <input type="time" class="inputCadSaida" id="horaRetorno" name="horaRetorno" placeholder="Hora de Retorno Prevista"><br><br>
 
-                        <label class="textCadSaida" for="motivoSaida">Motivo da Saída:</label><br>
+                        <label class="textCadSaida" for="motivoSaida">MOTIVO DA SAÍDA:</label><br>
                         <input type="text" class="inputCadSaida" id="motivoSaida" name="motivo" placeholder="Motivo da Saída" required><br><br>
 
-                        <label class="textCadSaida" for="localDestino">Destino:</label><br>
+                        <label class="textCadSaida" for="localDestino">DESTINO:</label><br>
                         <input type="text" class="inputCadSaida" id="localDestino" name="destino" placeholder="Local de Destino" required><br><br>
 
-                        <label class="textCadSaida" for="statusSaida">Status:</label><br>
-                        <select class="inputCadSaida" id="statusSaida" name="status" required readonly>
+                        <label class="textCadSaida" for="statusSaida">STATUS:</label><br>
+                        <select class="selectStatus" class="inputCadSaida" id="statusSaida" name="status" required readonly>
                             <option value="Pendente" selected>Pendente</option>
                         </select><br><br>
 
-                        <label class="textCadSaida" for="codAluno">Código do Aluno</label><br>
+                        <label class="textCadSaida" for="codAluno">CÓDIGO DO ALUNO:</label><br>
                         <input type="text" class="inputCadSaida" id="codAluno" name="codigoAluno" placeholder="Código do Aluno" required><br><br>
 
-                        <label class="textCadSaida" for="nomeAluno">Nome do Aluno:</label><br>
+                        <label class="textCadSaida" for="nomeAluno">NOME DO ALUNO:</label><br>
                         <!-- <input type="text" class="inputCadSaida" id="nomeAluno" name="nome" placeholder="Nome do Aluno" required autocomplete="given-name" readonly><br><br> -->
-                        <select class="inputCadSaida" id="nomeAluno" name="status" required>
+                        <select class="selectAluno" class="inputCadSaida" id="nomeAluno" name="status" required>
                             <option value="" selected></option>
                         </select><br><br>
 
-                        <label class="textCadSaida" for="codProfessor">Código do Professor:</label><br>
+                        <label class="textCadSaida" for="codProfessor">CÓDIGO DO PROFESSOR:</label><br>
                         <input type="text" class="inputCadSaida" id="codProfessor" name="codigoProfessor" placeholder="Código do Professor" required><br><br>
 
-                        <label class="textCadSaida" for="nomeProfessor">Nome do Professor:</label><br>
+                        <label class="textCadSaida" for="nomeProfessor">NOME DO PROFESSOR:</label><br>
                         <!-- <input type="text" class="inputCadSaida" id="nomeProfessor" name="professor" placeholder="Nome do Professor" required autocomplete="family-name"><br><br> -->
-                        <select class="inputCadSaida" id="nomeProfessor" name="status" required>
+                        <select class="selectProfessor" class="inputCadSaida" id="nomeProfessor" name="status" required>
                             <option value="" selected></option>
-                        </select><br><br>
+                        </select><br><br><br>
 
                         <button id="btnCadSaida" type="submit">Cadastrar Saída</button>
                     </form><br>
