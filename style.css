@@ -389,19 +389,10 @@ main {
 
 /* - EDITAR ALUNO - */
 
-.editar-aluno {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
 .textEditarAluno {
     font-size: 24px;
     color: white;
     font-family: 'Lilita One', cursive;
-    margin-bottom: 20px;
 }
 
 .inputEditarAluno {
@@ -824,7 +815,7 @@ main {
     font-size: 24px;
     color: white;
     font-family: 'Lilita One', cursive;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .inputCadSaida {
@@ -923,9 +914,120 @@ main {
     font-style: normal;
 }
 
+/* - EDITAR SAÍDA - */
+
+.editar-saida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.textEditarSaida {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 0px;
+}
+
+.inputEditarSaida {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnBuscarSaida {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnBuscarSaida:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+#btnEditarSaida {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnEditarSaida:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
 /* - DELETAR SAÍDA - */
 
+.textDelSaida {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-bottom: 20px;
+}
 
+.inputDelSaida {
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    text-align: center;
+}
+
+#btnDeletarSaida {
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lilita One', cursive;
+    border: none;
+    box-shadow: 0 0 6px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnDeletarSaida:hover {
+    background-color: #203750;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+/* - FINAL SAÍDAS - */
 
 /* - MENSAGEM SUCESSO/ERRO - */
 
