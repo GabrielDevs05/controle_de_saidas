@@ -223,7 +223,6 @@ main {
 .listagem-alunos {
     height: 100%;
     margin: 0 auto;
-    padding: 20px;
     font-family: 'Lilita One', cursive;
     color: white;
     width: 100%;
@@ -500,7 +499,6 @@ main {
 .listagem-professores {
     height: 100%;
     margin: 0 auto;
-    padding: 20px;
     font-family: 'Lilita One', cursive;
     color: white;
     width: 100%;
@@ -590,7 +588,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .textConsultaProfessor {
@@ -651,7 +648,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .textEditarProfessor {
@@ -758,14 +754,11 @@ main {
 /*- LISTAR SAÍDAS -*/
 
 .listagem-saidas {
-    height: 99%;
+    height: 100%;
     margin: 0 auto;
-    padding: 20px;
     font-family: 'Lilita One', cursive;
     color: white;
-    border: 1px solid white;
     border-radius: 32px;
-    background-color: #203750;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -778,6 +771,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     height: auto;
+    padding-bottom: 20px;
 }
 
 .tabelaSaida {
@@ -851,6 +845,11 @@ main {
     box-shadow: 0 0 8px #ffffff;
 }
 
+.btnPermitido {
+    background-color: #4CAF50;
+    box-shadow: white ;
+}
+
 /* - FINAL CADASTRAR SAÍDA - */
 
 /* - CONSULTAR SAÍDA - */
@@ -860,7 +859,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .textConsultaSaida {
@@ -1027,6 +1025,85 @@ main {
     box-shadow: 0 0 8px #ffffff;
 }
 
+/* - FILA VIRTUAL - */
+
+.btnPermitido {
+    font-family: 'Lilita One', cursive;
+    font-weight: normal;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btnPermitido:hover {
+    background-color: #38883c;
+}
+
+.btnRecusado {
+    font-family: 'Lilita One', cursive;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btnRecusado:hover {
+    background-color: #d32f2f;
+}
+
+.btnRetornou {
+    font-family: 'Lilita One', cursive;
+    background-color: #e28924;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btnRetornou:hover {
+    background-color: #c7761a;
+}
+
+.btnRemover {
+     font-family: 'Lilita One', cursive;
+    font-weight: normal;
+    background-color: #686767;
+    color: white;
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btnRemover:hover {
+    background-color: #494949;
+}
+
+.tabelaSaida th, .tabelaSaida td {
+    padding: 12px;
+    text-align: center;
+    border: 3px solid #ddd;
+    border-radius: 12px;
+}
+
 /* - FINAL SAÍDAS - */
 
 /* - MENSAGEM SUCESSO/ERRO - */
@@ -1066,6 +1143,8 @@ footer {
 .rodape small {
     margin: 0;
 }
+
+
 
 /* - FINAL FOOTER - */
 

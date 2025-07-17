@@ -204,14 +204,10 @@ btnCadSaida.addEventListener('click', (e) => {
         mensagem.style.backgroundColor = 'lightcoral'
         console.error('Erro:', error)
       })
-
-      
-  
     } else {
       mensagem.textContent = 'POR FAVOR, PREENCHA TODOS OS CAMPOS!'
       mensagem.style.backgroundColor = 'lightcoral'
       console.error('Campos faltando.')
     }
-  
     mensagem.style.display = 'block'
   })

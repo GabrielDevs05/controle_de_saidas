@@ -1,20 +1,20 @@
-let mensagem = document.getElementById('mensagem');
-let btnBuscarSaida = document.getElementById('btnBuscarSaida');
-let btnEditarSaida = document.getElementById('btnEditarSaida');
+let mensagem = document.getElementById('mensagem')
+let btnBuscarSaida = document.getElementById('btnBuscarSaida')
+let btnEditarSaida = document.getElementById('btnEditarSaida')
 
-let codSaida = document.getElementById('codSaida');
-let dataSolicitacao = document.getElementById('dataSolicitacao');
-let horaSaida = document.getElementById('horaSaida');
-let horaRetorno = document.getElementById('horaRetorno');
-let motivo = document.getElementById('motivoSaida');
-let localDestino = document.getElementById('localDestino');
-let statusSaida = document.getElementById('statusSaida');
-let codAluno = document.getElementById('codAluno');
-let nomeAluno = document.getElementById('nomeAluno');
-let codProfessor = document.getElementById('codProfessor');
-let nomeProfessor = document.getElementById('nomeProfessor');
+let codSaida = document.getElementById('codSaida')
+let dataSolicitacao = document.getElementById('dataSolicitacao')
+let horaSaida = document.getElementById('horaSaida')
+let horaRetorno = document.getElementById('horaRetorno')
+let motivo = document.getElementById('motivoSaida')
+let localDestino = document.getElementById('localDestino')
+let statusSaida = document.getElementById('statusSaida')
+let codAluno = document.getElementById('codAluno')
+let nomeAluno = document.getElementById('nomeAluno')
+let codProfessor = document.getElementById('codProfessor')
+let nomeProfessor = document.getElementById('nomeProfessor')
 
-mensagem.style.display = 'none';
+mensagem.style.display = 'none'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         option.value = professor.codProfessor
         option.textContent = `${professor.nome} ${professor.sobrenome}`
         nomeProfessor.appendChild(option)
-      });
+      })
     })
     .catch(error => console.error('Erro ao buscar Professores:', error))
 })
@@ -143,10 +143,10 @@ btnEditarSaida.addEventListener('click', (e) => {
       mensagem.style.backgroundColor = 'lightcoral'
       mensagem.style.display = 'block'
       console.error('Erro:', error)
-    });
+    })
   } else {
     mensagem.textContent = 'Preencha todos os campos!'
     mensagem.style.backgroundColor = 'lightcoral'
     mensagem.style.display = 'block'
   }
-});
+})
