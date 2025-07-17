@@ -236,6 +236,7 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
+    padding-bottom: 20px;
   }
   
   .aluno-card {
@@ -1027,6 +1028,45 @@ main {
 
 /* - FILA VIRTUAL - */
 
+.tabelaSaida {
+    min-width: 1200px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    color: #000000;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .tabelaSaida thead {
+    background-color: #203750;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .tabelaSaida th, .tabelaSaida td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  .tabelaSaida th {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .tabelaSaida td {
+    border-bottom: 3px solid #203750;
+  }
+  
+  .acoes button {
+    margin: 2px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
 .btnPermitido {
     font-family: 'Lilita One', cursive;
     font-weight: normal;
@@ -1037,7 +1077,6 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
     transition: background-color 0.3s;
 }
 
@@ -1054,7 +1093,7 @@ main {
     margin: 2px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s;
 }
 
@@ -1071,7 +1110,7 @@ main {
     margin: 2px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s;
 }
 
@@ -1080,7 +1119,7 @@ main {
 }
 
 .btnRemover {
-     font-family: 'Lilita One', cursive;
+    font-family: 'Lilita One', cursive;
     font-weight: normal;
     background-color: #686767;
     color: white;
@@ -1089,7 +1128,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s;
 }
 
@@ -1098,10 +1137,45 @@ main {
 }
 
 .tabelaSaida th, .tabelaSaida td {
+    font-family: 'Lilita One', cursive;
     padding: 12px;
     text-align: center;
-    border: 3px solid #ddd;
-    border-radius: 12px;
+    font-weight: normal;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+th {
+    background-color: #203750;
+    font-weight: bold;
+}
+
+td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+th:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 /* - FINAL SAÍDAS - */
@@ -1144,9 +1218,5 @@ footer {
     margin: 0;
 }
 
-
-
 /* - FINAL FOOTER - */
-
-/* - MEDIA QUERIES - */
 
