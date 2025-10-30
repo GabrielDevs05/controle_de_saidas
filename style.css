@@ -1220,3 +1220,74 @@ footer {
 
 /* - FINAL FOOTER - */
 
+/* 📱 Responsividade para tablets */
+@media (max-width: 1024px) {
+  .btns {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .btnAlunos,
+  .btnSaidas,
+  .btnProf,
+  .btnGraf {
+    width: 220px;
+    height: 220px;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .titulo-cabecalho {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+}
+
+/* MEDIA QUERY PARA CELULARES */
+
+@media (max-width: 600px) {
+  .btns {
+    gap: 30px;
+  }
+
+  .btnAlunos,
+  .btnSaidas,
+  .btnProf,
+  .btnGraf {
+    width: 180px;
+    height: 180px;
+  }
+
+  .inputCadAluno,
+  .selectAluno,
+  .inputConsultaAluno {
+    width: 300px;
+  }
+
+  #btnCadAluno,
+  #btnConsultaAluno {
+    width: 160px;
+  }
+
+  header {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  main {
+    padding: 20px 0;
+  }
+
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+
