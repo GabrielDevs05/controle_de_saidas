@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progCadastrarProfessores.js" defer></script>
+    <title>Cadastrar Professor</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">PROFESSORES</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-professores">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Cadastro de Professores!
+                    </p>
+                </div>
+                <div class="formulario-cadastro-professor">
+                    <p class="textCadProfessor">Preencha os campos abaixo para cadastrar um novo professor!</p><br>
+                    <form id="formCadastroProfessor">
+                        <label class="textCadProfessor" for="nomeProfessor">NOME:</label><br>
+                        <input type="text" class="inputCadProfessor" id="nomeProfessor" name="nome" placeholder="Nome do Professor" required autocomplete="given-name"><br><br>
+
+                        <label class="textCadProfessor" for="sobrenomeProfessor">SOBRENOME:</label><br>
+                        <input type="text" class="inputCadProfessor" id="sobrenomeProfessor" name="sobrenome" placeholder="Sobrenome do Professor" required autocomplete="family-name"><br><br>
+
+                        <label class="textCadProfessor" for="matriculaProfessor">MATRICULA:</label><br>
+                        <input type="text" class="inputCadProfessor" id="matriculaProfessor" name="matricula" placeholder="Matricula do Professor" required><br><br>
+
+                        <label class="textCadProfessor" for="telefoneProfessor">TELEFONE:</label><br>
+                        <input type="tel" class="inputCadProfessor" id="telefoneProfessor" name="telefone" placeholder="Telefone do Professor" required autocomplete="tel"><br><br>
+
+                        <label class="textCadProfessor" for="emailProfessor">EMAIL:</label><br>
+                        <input type="email" class="inputCadProfessor" id="emailProfessor" name="email" placeholder="Email do Professor" required autocomplete="email"><br><br><br>
+
+                        <button id="btnCadProfessor" type="submit">Cadastrar Professor</button>
+                    </form><br>
+                    <div id="mensagem"></div>
+                </div>
+            </div>
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./professores.html">LISTA DE PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarProfessor.html"><strong>CADASTRAR PROFESSORES</strong></a></li>
+                        <li><a class="btnsMenu" href="./consultarProfessor.html">CONSULTAR PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./editarProfessor.html">EDITAR PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./deletarProfessor.html">DELETAR PROFESSORES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

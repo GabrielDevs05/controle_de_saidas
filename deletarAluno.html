@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progDeletarAlunos.js" defer></script>
+    <title>Deletar Aluno</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">ALUNOS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-alunos">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Deletar Alunos pelo Código
+                    </p>
+                </div>
+                <div class="deletagem-alunos">
+                    <section class="deletar-aluno">
+                        <p class="textDelAluno">Digite o código do aluno que deseja DELETAR!</p><br>
+                        <div class="delAluno">
+                            <label class="textDelAluno" for="codAluno">CÓDIGO DO ALUNO:</label><br>
+                            <input type="text" class="inputDelAluno" id="codAluno" name="codigo" placeholder="Código do Aluno" required><br><br><br>
+                            <button id="btnDeletarAluno" type="submit">Deletar Aluno</button>
+                        </div>
+                        <br>
+                        <div id="mensagem"></div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarAluno.html">CADASTRAR ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./consultarAluno.html">CONSULTAR ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./editarAluno.html">EDITAR ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./deletarAluno.html"><strong>DELETAR ALUNOS</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

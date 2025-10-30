@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./progEditarSaidas.js" defer></script>
+  <title>Editar Saída</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="logo-senai">
+      <a href="./index.html" class="logo-senai-link">
+        <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img" />
+      </a>
+    </div>
+    <div class="titulo-cabecalho">
+      <p class="titulo">SAÍDAS</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="menu-saidas">
+      <div class="lado-esquerdo">
+        <div class="titulo-main">
+          <p class="titulo-principal">
+            Consultar saidas pelo Código
+          </p>
+        </div>
+        <div class="Editagem-saidas">
+          <section class="editar-saida">
+            <p class="textEditarSaida">
+              Digite o código da saida que deseja EDITAR!
+            </p>
+            <br>
+            <label class="textEditarSaida" for="codSaida">CÓDIGO DA SAÍDA:</label>
+            <input type="text" class="inputEditarSaida" id="codSaida" name="codigo"placeholder="Código do Saida" /><br><br>
+            <button id="btnBuscarSaida" type="submit">Buscar Saída</button><br><br>
+
+            <label class="textEditarSaida" for="dataSolicitacao">DATA DA SAÍDA:</label>
+            <input type="date" class="inputEditarSaida" id="dataSolicitacao" name="data" required readonly /><br><br>
+
+            <label class="textEditarSaida" for="horaSaida">HORA DA SAÍDA:</label>
+            <input type="time" class="inputEditarSaida" id="horaSaida" name="hora" required readonly /><br><br>
+
+            <label class="textEditarSaida" for="horaRetorno">HORA DO RETORNO:</label>
+            <input type="time" class="inputEditarSaida" id="horaRetorno" name="horaRetorno" placeholder="Hora de Retorno Prevista" /><br><br>
+
+            <label class="textEditarSaida" for="motivoSaida">MOTIVO DA SAÍDA:</label>
+            <input type="text" class="inputEditarSaida" id="motivoSaida" name="motivo" placeholder="Motivo da Saída" required /><br><br>
+
+            <label class="textEditarSaida" for="localDestino">DESTINO:</label>
+            <input type="text" class="inputEditarSaida" id="localDestino" name="destino" placeholder="Local de Destino" required /><br><br>
+
+            <label class="textEditarSaida" for="statusSaida">STATUS:</label>
+            <select class="selectStatus inputEditarSaida" id="statusSaida" name="status" required readonly>
+              <option value="Pendente" selected>Pendente</option>
+              <option value="Recusado" disabled>Recusado</option>
+              <option value="Permitido" disabled>Permitido</option>
+              <option value="Retornou" disabled>Retornou</option>
+            </select><br><br>
+
+            <label class="textEditarSaida" for="codAluno">CÓDIGO DO ALUNO:</label>
+            <input type="text" class="inputEditarSaida" id="codAluno" name="codigoAluno" placeholder="Código do Aluno" required /><br><br>
+
+            <label class="textEditarSaida" for="nomeAluno">NOME DO ALUNO:</label>
+            <select class="selectAluno inputEditarSaida" id="nomeAluno" name="status" required>
+              <option value="" selected></option>
+            </select><br><br>
+
+            <label class="textEditarSaida" for="codProfessor">CÓDIGO DO PROFESSOR:</label>
+            <input type="text" class="inputEditarSaida" id="codProfessor" name="codigoProfessor" placeholder="Código do Professor" required /><br><br>
+
+            <label class="textEditarSaida" for="nomeProfessor">NOME DO PROFESSOR:</label>
+            <select class="selectProfessor inputEditarSaida" id="nomeProfessor" name="status" required>
+              <option value="" selected></option>
+            </select><br><br><br>
+
+            <button id="btnEditarSaida" type="submit">Editar Saída</button>
+          </section>
+          <br>
+          <div id="mensagem"></div>
+        </div>
+      </div>
+
+      <div class="menu-lateral-direito">
+        <div class="titulo-menu-lateral">
+          <p class="titulo-menu">MENU</p>
+        </div>
+        <div class="lista-menu-lateral">
+          <ul class="lista-menu">
+            <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+            <li><a class="btnsMenu" href="./saidas.html">FILA VIRTUAL</a></li>
+            <li><a class="btnsMenu" href="./listaSaida.html">LISTA DE SAÍDAS</a></li>
+            <li><a class="btnsMenu" href="./cadastrarSaida.html">CADASTRAR SAÍDAS</a></li>
+            <li><a class="btnsMenu" href="./consultarSaida.html">CONSULTAR SAÍDAS</a></li>
+            <li><a class="btnsMenu" href="./editarSaida.html"><strong>EDITAR SAÍDAS</strong></a></li>
+            <li><a class="btnsMenu" href="./deletarSaida.html">DELETAR SAÍDAS</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

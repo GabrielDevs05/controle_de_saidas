@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progConsultarAlunos.js" defer></script>
+    <title>Consultar Aluno</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">ALUNOS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-alunos">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Consultar Alunos pelo Código
+                    </p><br>
+                    <p class="textConsultaAluno">Digite o código do aluno que deseja CONSULTAR!</p>
+                </div>
+                <div class="listagem-alunos">
+                    <section class="formulario-consulta-aluno">
+                        <div class="consultaAluno">
+                            <label class="textConsultaAluno" for="codAluno">CÓDIGO DO ALUNO:</label><br>
+                            <input type="text" class="inputConsultaAluno" id="codAluno" name="codigo" placeholder="Código do Aluno" required><br><br><br>
+                            <button id="btnConsultaAluno" type="submit">Consultar Aluno</button>
+                        </div>
+                            <br>
+                        <div id="alunoConsultado"></div><br>
+                        <div id="mensagem"></div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./alunos.html">LISTA DE ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarAluno.html">CADASTRAR ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./consultarAluno.html"><strong>CONSULTAR ALUNOS</strong></a></li>
+                        <li><a class="btnsMenu" href="./editarAluno.html">EDITAR ALUNOS</a></li>
+                        <li><a class="btnsMenu" href="./deletarAluno.html">DELETAR ALUNOS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

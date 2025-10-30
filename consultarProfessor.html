@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progConsultarProfessores.js" defer></script>
+    <title>Consultar Professor</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">PROFESSORES</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-professores">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        Consultar Professores pelo Código
+                    </p>
+                </div>
+                <div class="listagem-professores">
+                    <section class="formulario-consulta-professor">
+                        <p class="textConsultaProfessor">Digite o código do professor que deseja CONSULTAR!</p><br>
+                        <div class="consultaProfessor">
+                            <label class="textConsultaProfessor" for="codProfessor">CÓDIGO DO PROFESSOR:</label><br>
+                            <input type="text" class="inputConsultaProfessor" id="codProfessor" name="codigo" placeholder="Código do Professor" required><br><br><br>
+                            <button id="btnConsultaProfessor" type="submit">Consultar Professor</button>
+                        </div>
+                            <br>
+                        <div id="professorConsultado"></div><br>
+                        <div id="mensagem"></div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./professores.html">LISTA DE PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarProfessor.html">CADASTRAR PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./consultarProfessor.html"><strong>CONSULTAR PROFESSORES</strong></a></li>
+                        <li><a class="btnsMenu" href="./editarProfessor.html">EDITAR PROFESSORES</a></li>
+                        <li><a class="btnsMenu" href="./deletarProfessor.html">DELETAR PROFESSORES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./progFilaVirtual.js" defer></script>
+    <title>Saidas</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo-senai">
+            <a href="./index.html" class="logo-senai-link">
+                <img src="./imgs/logoSenai.png" alt="Logo do SENAI" class="logo-senai-img">
+            </a>
+        </div>
+        <div class="titulo-cabecalho">
+            <p class="titulo">SAÍDAS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-saidas">
+            <div class="lado-esquerdo">
+                <div class="titulo-main">
+                    <p class="titulo-principal">
+                        FILA VIRTUAL
+                    </p>
+                </div class>
+                    <section id="saidaList">
+                        <table class="tabelaSaida">
+                            <thead>
+                                <tr>
+                                    <th>Data da Saída</th>
+                                    <th>Hora da Saída</th>
+                                    <th>Hora do Retorno</th>
+                                    <th>Motivo</th>
+                                    <th>Destino</th>
+                                    <th>Status</th>
+                                    <th>Nome do Aluno</th>
+                                    <th>Nome do Professor</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="saidaTableBody">
+                            </tbody>
+                    </table>
+                </section>
+            </div>
+
+
+            <div class="menu-lateral-direito">
+                <div class="titulo-menu-lateral">
+                    <p class="titulo-menu">MENU</p>
+                </div>
+                <div class="lista-menu-lateral">
+                    <ul class="lista-menu">
+                        <li><a class="btnsMenu" href="./index.html">VOLTAR AO INÍCIO</a></li>
+                        <li><a class="btnsMenu" href="./saidas.html"><strong>FILA VIRTUAL</strong></a></li>
+                        <li><a class="btnsMenu" href="./listaSaida.html">LISTA DE SAÍDAS</a></li>
+                        <li><a class="btnsMenu" href="./cadastrarSaida.html">CADASTRAR SAÍDAS</a></li>
+                        <li><a class="btnsMenu" href="./consultarSaida.html">CONSULTAR SAÍDAS</a></li>
+                        <li><a class="btnsMenu" href="./editarSaida.html">EDITAR SAÍDAS</a></li>
+                        <li><a class="btnsMenu" href="./deletarSaida.html">DELETAR SAÍDAS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <div class="textRodape">
+                <small>Feito por Gabriel André Ribeiro &copy;</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
